@@ -1,7 +1,10 @@
 {
   "name": "@panache/sweetalert3",
   "version": "11.22.0",
-  "repository": "jybleau/sweetalert3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jybleau/sweetalert3.git"
+  },
   "homepage": "https://github.com/jybleau/sweetalert3",
   "description": "A beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes, supported fork of sweetalert",
   "main": "dist/sweetalert3.all.js",
