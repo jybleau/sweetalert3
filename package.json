@@ -2,7 +2,7 @@
   "name": "sweetalert3",
   "version": "11.21.2",
   "repository": "jybleau/sweetalert3",
-  "homepage": "https://github.com/jybleau",
+  "homepage": "https://github.com/jybleau/sweetalert3",
   "description": "A beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes, supported fork of sweetalert",
   "main": "dist/sweetalert3.all.js",
   "browser": "dist/sweetalert3.all.js",
@@ -37,10 +37,11 @@
     "dist",
     "src",
     "themes",
-    "sweetalert2.d.ts"
+    "sweetalert3.d.ts"
   ],
-  "author": "Limon Monte (https://limonte.github.io)",
+  "author": "",
   "contributors": [
+    "Limon Monte (https://limonte.github.io)",
     "Matthew Francis Brunetti <zenflow87@gmail.com> (https://github.com/zenflow)",
     "Morgan Touverey-Quilling <mtouverey@alembic-dev.com> (https://github.com/toverux)",
     "Giuseppe Verni (https://github.com/gverni)",
