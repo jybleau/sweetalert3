@@ -1,4 +1,4 @@
-export const consolePrefix = 'SweetAlert2:'
+export const consolePrefix = 'SweetAlert:'
 
 /**
  * Capitalize the first letter of a string

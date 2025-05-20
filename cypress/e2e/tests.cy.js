@@ -361,7 +361,7 @@ describe('allowOutsideClick', () => {
       backdrop: false,
     })
     expect(
-      spy.calledWith('SweetAlert3: "allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`')
+      spy.calledWith('SweetAlert: "allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`')
     ).to.be.true
   })
 
@@ -460,10 +460,10 @@ describe('customClass', () => {
       },
     })
     expect(
-      spy.calledWith('SweetAlert3: Invalid type of customClass.title! Expected string or iterable object, got "object"')
+      spy.calledWith('SweetAlert: Invalid type of customClass.title! Expected string or iterable object, got "object"')
     ).to.be.true
     expect(
-      spy.calledWith('SweetAlert3: Invalid type of customClass.popup! Expected string or iterable object, got "number"')
+      spy.calledWith('SweetAlert: Invalid type of customClass.popup! Expected string or iterable object, got "number"')
     ).to.be.true
   })
 })
@@ -606,7 +606,7 @@ describe('icon', () => {
     })
     expect(
       spy.calledWith(
-        'SweetAlert3: Unknown icon! Expected "success", "error", "warning", "info" or "question", got "invalid-icon"'
+        'SweetAlert: Unknown icon! Expected "success", "error", "warning", "info" or "question", got "invalid-icon"'
       )
     ).to.be.true
 
@@ -1320,26 +1320,26 @@ describe('template', () => {
     expect(Swal.getImage().getAttribute('alt')).to.equal('')
     expect(Swal.getInput().type).to.equal('text')
     expect(spy.callCount).to.equal(4)
-    expect(spy.getCall(0).calledWith(`SweetAlert3: Unrecognized element <swal-foo>`)).to.be.true
+    expect(spy.getCall(0).calledWith(`SweetAlert: Unrecognized element <swal-foo>`)).to.be.true
     expect(
       spy
         .getCall(1)
         .calledWith(
-          `SweetAlert3: Unrecognized attribute "foo" on <swal-image>. Allowed attributes are: src, width, height, alt`
+          `SweetAlert: Unrecognized attribute "foo" on <swal-image>. Allowed attributes are: src, width, height, alt`
         )
     ).to.be.true
     expect(
       spy
         .getCall(2)
         .calledWith(
-          `SweetAlert3: Unrecognized attribute "bar" on <swal-input>. Allowed attributes are: type, label, placeholder, value`
+          `SweetAlert: Unrecognized attribute "bar" on <swal-input>. Allowed attributes are: type, label, placeholder, value`
         )
     ).to.be.true
     expect(
       spy
         .getCall(3)
         .calledWith(
-          `SweetAlert3: Unrecognized attribute "value" on <swal-title>. To set the value, use HTML within the element.`
+          `SweetAlert: Unrecognized attribute "value" on <swal-title>. To set the value, use HTML within the element.`
         )
     ).to.be.true
   })
@@ -2089,7 +2089,7 @@ describe('theme', () => {
     })
     expect(
       spy.calledWith(
-        `SweetAlert3: Invalid theme "foo". Expected "light", "dark", "auto", "minimal", "borderless", or "embed-iframe"`
+        `SweetAlert: Invalid theme "foo". Expected "light", "dark", "auto", "minimal", "borderless", or "embed-iframe"`
       )
     ).to.be.true
   })
@@ -2330,7 +2330,7 @@ describe('update()', () => {
       Swal.update()
       expect(
         spy.calledWith(
-          `SweetAlert3: You're trying to update the closed or closing popup, that won't work. Use the update() method in preConfirm parameter or show a new popup.`
+          `SweetAlert: You're trying to update the closed or closing popup, that won't work. Use the update() method in preConfirm parameter or show a new popup.`
         )
       ).to.be.true
       done()
@@ -2344,7 +2344,7 @@ describe('update()', () => {
     Swal.update({ theme: 'foo' })
     expect(
       spy.calledWith(
-        `SweetAlert3: Invalid theme "foo". Expected "light", "dark", "auto", "minimal", "borderless", or "embed-iframe"`
+        `SweetAlert: Invalid theme "foo". Expected "light", "dark", "auto", "minimal", "borderless", or "embed-iframe"`
       )
     ).to.be.true
   })
@@ -2368,13 +2368,13 @@ describe('Miscellaneous tests', function () {
   it('should throw console warning about invalid params', () => {
     const spy = cy.spy(console, 'warn')
     Swal.fire({ invalidParam: 'oops' })
-    expect(spy.calledWith('SweetAlert3: Unknown parameter "invalidParam"')).to.be.true
+    expect(spy.calledWith('SweetAlert: Unknown parameter "invalidParam"')).to.be.true
   })
 
   it('should throw console error about unexpected params', () => {
     const spy = cy.spy(console, 'error')
     Swal.fire('Hello world!', { icon: 'success' })
-    expect(spy.calledWith('SweetAlert3: Unexpected type of html! Expected "string" or "Element", got object')).to.be
+    expect(spy.calledWith('SweetAlert: Unexpected type of html! Expected "string" or "Element", got object')).to.be
       .true
   })
 
@@ -3068,7 +3068,7 @@ describe('Inputs', () => {
     const spy = cy.spy(console, 'error')
     Swal.fire({ input: 'invalid-input-type' })
     expect(spy).to.be.calledWith(
-      'SweetAlert3: Unexpected type of input! Expected month | week | time | datetime-local | date | search | url | tel | number | password | email | text | file | range | select | radio | checkbox | textarea, got "invalid-input-type"'
+      'SweetAlert: Unexpected type of input! Expected month | week | time | datetime-local | date | search | url | tel | number | password | email | text | file | range | select | radio | checkbox | textarea, got "invalid-input-type"'
     )
   })
 
@@ -3504,7 +3504,7 @@ describe('Inputs', () => {
       returnInputValueOnDeny: true,
     })
     Swal.clickDeny()
-    expect(spy.calledWith('SweetAlert3: The "input" parameter is needed to be set when using returnInputValueOnDeny'))
+    expect(spy.calledWith('SweetAlert: The "input" parameter is needed to be set when using returnInputValueOnDeny'))
       .to.be.true
   })
 
@@ -3543,7 +3543,7 @@ describe('Inputs', () => {
   it('should throw console error about unexpected type of InputOptions', () => {
     const spy = cy.spy(console, 'error')
     Swal.fire({ input: 'select', inputOptions: 'invalid-input-options' })
-    expect(spy.calledWith('SweetAlert3: Unexpected type of inputOptions! Expected object, Map or Promise, got string'))
+    expect(spy.calledWith('SweetAlert: Unexpected type of inputOptions! Expected object, Map or Promise, got string'))
       .to.be.true
   })
 
@@ -3788,7 +3788,7 @@ describe('inputValue', () => {
       }),
       didOpen: () => {
         setTimeout(() => {
-          expect(spy.calledWith('SweetAlert3: Error in inputValue promise: Error: input promise rejected')).to.be.true
+          expect(spy.calledWith('SweetAlert: Error in inputValue promise: Error: input promise rejected')).to.be.true
           done()
         }, TIMEOUT)
       },
@@ -3800,7 +3800,7 @@ describe('inputValue', () => {
     Swal.fire({ input: 'text', inputValue: undefined })
     expect(
       spy.calledWith(
-        'SweetAlert3: Unexpected type of inputValue! Expected "string", "number" or "Promise", got "undefined"'
+        'SweetAlert: Unexpected type of inputValue! Expected "string", "number" or "Promise", got "undefined"'
       )
     ).to.be.true
   })
@@ -3810,7 +3810,7 @@ describe('inputValue', () => {
     Swal.fire({ input: 'textarea', inputValue: {} })
     expect(
       spy.calledWith(
-        'SweetAlert3: Unexpected type of inputValue! Expected "string", "number" or "Promise", got "object"'
+        'SweetAlert: Unexpected type of inputValue! Expected "string", "number" or "Promise", got "object"'
       )
     ).to.be.true
   })
@@ -4186,7 +4186,7 @@ describe('Toast', () => {
     Toast.fire({
       allowOutsideClick: true,
     })
-    expect(spy.calledWith('SweetAlert3: The parameter "allowOutsideClick" is incompatible with toasts')).to.be.true
+    expect(spy.calledWith('SweetAlert: The parameter "allowOutsideClick" is incompatible with toasts')).to.be.true
 
     console.warn = _consoleWarn
   })

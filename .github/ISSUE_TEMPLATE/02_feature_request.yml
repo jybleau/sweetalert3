@@ -1,5 +1,5 @@
 name: Feature request
-description: Wouldn’t it be nice if SweetAlert2 could ...
+description: Wouldn’t it be nice if SweetAlert3 could ...
 body:
   - type: markdown
     attributes:
@@ -16,9 +16,9 @@ body:
     id: description
     attributes:
       label: New feature description
-      description: Optionally describe the functional changes that would have to be made in SweetAlert2
+      description: Optionally describe the functional changes that would have to be made in SweetAlert3
   - type: textarea
     id: implementation
     attributes:
       label: New feature implementation
-      description: Optionally describe the technical changes to be made in SweetAlert2
+      description: Optionally describe the technical changes to be made in SweetAlert3

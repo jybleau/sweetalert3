@@ -13,7 +13,7 @@ declare module 'sweetalert3' {
    */
   namespace Swal {
     /**
-     * Function to display a SweetAlert2 popup, with an object of options, all being optional.
+     * Function to display a SweetAlert popup, with an object of options, all being optional.
      * See the `SweetAlertOptions` interface for the list of accepted fields and values.
      *
      * Example:
@@ -28,7 +28,7 @@ declare module 'sweetalert3' {
     function fire<T = any>(options: SweetAlertOptions): Promise<SweetAlertResult<Awaited<T>>>
 
     /**
-     * Function to display a simple SweetAlert2 popup.
+     * Function to display a simple SweetAlert popup.
      *
      * Example:
      * ```
@@ -74,7 +74,7 @@ declare module 'sweetalert3' {
     function update(options: Pick<SweetAlertOptions, SweetAlertUpdatableParameters>): void
 
     /**
-     * Closes the currently open SweetAlert2 popup programmatically.
+     * Closes the currently open SweetAlert popup programmatically.
      *
      * @param result The promise originally returned by `Swal.fire()` will be resolved with this value.
      * If no object is given, the promise is resolved with an empty `SweetAlertResult` object.
@@ -333,7 +333,7 @@ declare module 'sweetalert3' {
     }
 
     /**
-     * SweetAlert2's version
+     * SweetAlert's version
      */
     const version: string
   }
@@ -538,7 +538,7 @@ declare module 'sweetalert3' {
      * A HTML description for the popup.
      * If `text` and `html` parameters are provided in the same time, `html` will be used.
      *
-     * [Security] SweetAlert2 does NOT sanitize this parameter. It is the developer's responsibility
+     * [Security] SweetAlert does NOT sanitize this parameter. It is the developer's responsibility
      * to escape any user input when using the `html` option, so XSS attacks would be prevented.
      *
      * @default ''
@@ -547,7 +547,7 @@ declare module 'sweetalert3' {
 
     /**
      * The icon of the popup.
-     * SweetAlert2 comes with 5 built-in icons which will show a corresponding icon animation:
+     * SweetAlert comes with 5 built-in icons which will show a corresponding icon animation:
      * `'warning'`, `'error'`, `'success'`, `'info'` and `'question'`.
      * It can either be put to the object under the key `icon` or passed as the third parameter of `Swal.fire()`.
      *
@@ -631,7 +631,7 @@ declare module 'sweetalert3' {
     template?: string | HTMLTemplateElement | undefined
 
     /**
-     * Whether or not SweetAlert2 should show a full screen click-to-dismiss backdrop.
+     * Whether or not SweetAlert should show a full screen click-to-dismiss backdrop.
      * Either a boolean value or a css background value (hex, rgb, rgba, url, etc.)
      *
      * @default true
@@ -786,7 +786,7 @@ declare module 'sweetalert3' {
     timerProgressBar?: boolean | undefined
 
     /**
-     * By default, SweetAlert2 sets html's and body's CSS `height` to `auto !important`.
+     * By default, SweetAlert sets html's and body's CSS `height` to `auto !important`.
      * If this behavior isn't compatible with your project's layout, set `heightAuto` to `false`.
      *
      * @default true
@@ -822,16 +822,16 @@ declare module 'sweetalert3' {
     allowEnterKey?: ValueOrThunk<boolean> | undefined
 
     /**
-     * If set to `false`, SweetAlert2 will allow keydown events propagation to the document.
+     * If set to `false`, SweetAlert will allow keydown events propagation to the document.
      *
      * @default true
      */
     stopKeydownPropagation?: boolean | undefined
 
     /**
-     * Useful for those who are using SweetAlert2 along with Bootstrap modals.
+     * Useful for those who are using SweetAlert along with Bootstrap modals.
      * By default keydownListenerCapture is `false` which means when a user hits `Esc`,
-     * both SweetAlert2 and Bootstrap modals will be closed.
+     * both SweetAlert and Bootstrap modals will be closed.
      * Set `keydownListenerCapture` to `true` to fix that behavior.
      *
      * @default false
@@ -924,7 +924,7 @@ declare module 'sweetalert3' {
     cancelButtonAriaLabel?: string | undefined
 
     /**
-     * Whether to apply the default SweetAlert2 styling to buttons.
+     * Whether to apply the default SweetAlert styling to buttons.
      * If you want to use your own classes (e.g. Bootstrap classes) set this parameter to `false`.
      *
      * @default true
@@ -1288,7 +1288,7 @@ declare module 'sweetalert3/*/sweetalert3.all.js' {
 }
 
 /**
- * These interfaces aren't provided by SweetAlert2, but its definitions use them.
+ * These interfaces aren't provided by SweetAlert, but its definitions use them.
  * They will be merged with 'true' definitions.
  */
 

@@ -1,5 +1,5 @@
 /**
- * Main method to create a new SweetAlert2 popup
+ * Main method to create a new SweetAlert popup
  *
  * @param  {...SweetAlertOptions} args
  * @returns {Promise<SweetAlertResult>}
