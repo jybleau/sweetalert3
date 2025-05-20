@@ -1,11 +1,11 @@
 /**
  * @typedef { import('./SweetAlert').SweetAlert } SweetAlert
- * @typedef { import('sweetalert3').SweetAlertOptions } SweetAlertOptions
- * @typedef { import('sweetalert3').SweetAlertCustomClass } SweetAlertCustomClass
- * @typedef { import('sweetalert3').SweetAlertIcon } SweetAlertIcon
- * @typedef { import('sweetalert3').SweetAlertInput } SweetAlertInput
- * @typedef { import('sweetalert3').SweetAlertResult } SweetAlertResult
- * @typedef { import('sweetalert3').SweetAlertOptions['inputValue'] } SweetAlertInputValue
+ * @typedef { import('sweetalertbee').SweetAlertOptions } SweetAlertOptions
+ * @typedef { import('sweetalertbee').SweetAlertCustomClass } SweetAlertCustomClass
+ * @typedef { import('sweetalertbee').SweetAlertIcon } SweetAlertIcon
+ * @typedef { import('sweetalertbee').SweetAlertInput } SweetAlertInput
+ * @typedef { import('sweetalertbee').SweetAlertResult } SweetAlertResult
+ * @typedef { import('sweetalertbee').SweetAlertOptions['inputValue'] } SweetAlertInputValue
  */
 
 /**

@@ -668,18 +668,18 @@ describe('icon', () => {
 describe('image', () => {
   it('imageUrl, imageWidth, imageHeight', () => {
     Swal.fire({
-      imageUrl: 'https://github.com/jybleau/sweetalert3/tree/main/assets/swal3-logo.png',
+      imageUrl: 'https://github.com/jybleau/sweetalertbee/tree/main/assets/swal3-logo.png',
       imageWidth: 498,
       imageHeight: 84,
     })
-    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/swal3-logo.png')
+    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalertbee/tree/main/assets/swal3-logo.png')
     expect(Swal.getImage().style.width).to.equal('498px')
     expect(Swal.getImage().style.height).to.equal('84px')
   })
 
   it('image dimensions in custom CSS units', () => {
     Swal.fire({
-      imageUrl: 'https://github.com/jybleau/sweetalert3/tree/main/assets/swal3-logo.png',
+      imageUrl: 'https://github.com/jybleau/sweetalertbee/tree/main/assets/swal3-logo.png',
       imageWidth: '50%',
       imageHeight: '3em',
     })
@@ -1209,7 +1209,7 @@ describe('template', () => {
       <swal-title>Are you sure?</swal-title>
       <swal-html>You won't be able to revert this!</swal-html>
       <swal-icon type="success"></swal-icon>
-      <swal-image src="https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png" width="300" height="60" alt="safdsafd"></swal-image>
+      <swal-image src="https://github.com/jybleau/sweetalertbee/tree/main/assets/SweetAlertBee.png" width="300" height="60" alt="safdsafd"></swal-image>
       <swal-input type="select" placeholder="placeholderrr" value="b" label="input label">
         <swal-input-option value="a">aa</swal-input-option>
         <swal-input-option value="b">bb</swal-input-option>
@@ -1231,7 +1231,7 @@ describe('template', () => {
     })
     expect(Swal.getPopup().classList.contains('my-popup')).to.be.true
     expect(Swal.getTitle().textContent).to.equal('Are you sure?')
-    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png')
+    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalertbee/tree/main/assets/SweetAlertBee.png')
     expect(Swal.getImage().style.width).to.equal('300px')
     expect(Swal.getImage().style.height).to.equal('60px')
     expect(Swal.getInput().classList.contains('swal2-select')).to.be.true
@@ -1303,7 +1303,7 @@ describe('template', () => {
       <swal-html>Check out this <a>link</a>!</swal-html>
       <swal-foo>bar</swal-foo>
       <swal-title value="hey!"></swal-title>
-      <swal-image src="https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png" width="100" height="100" alt="" foo="1">Are you sure?</swal-image>
+      <swal-image src="https://github.com/jybleau/sweetalertbee/tree/main/assets/SweetAlertBee.png" width="100" height="100" alt="" foo="1">Are you sure?</swal-image>
       <swal-input bar>Are you sure?</swal-input>
     `
     document.body.appendChild(template)
@@ -1314,7 +1314,7 @@ describe('template', () => {
       imageWidth: 200, // user param should override <swal-image width="100">
       template: '#my-template-with-unexpected-attributes',
     })
-    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png')
+    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalertbee/tree/main/assets/SweetAlertBee.png')
     expect(Swal.getImage().style.width).to.equal('200px')
     expect(Swal.getImage().style.height).to.equal('100px')
     expect(Swal.getImage().getAttribute('alt')).to.equal('')
@@ -4356,7 +4356,7 @@ describe('bindClickHandler', () => {
     const buttonTriggerToast = document.createElement('button')
     buttonTriggerToast.setAttribute('data-swal-toast-template', '#my-template-for-declarative-triggering')
     const imgInsideButtonTriggerToast = document.createElement('img')
-    imgInsideButtonTriggerToast.src = 'https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png'
+    imgInsideButtonTriggerToast.src = 'https://github.com/jybleau/sweetalertbee/tree/main/assets/SweetAlertBee.png'
     buttonTriggerToast.appendChild(imgInsideButtonTriggerToast)
     document.body.appendChild(buttonTriggerToast)
 

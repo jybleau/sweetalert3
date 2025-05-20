@@ -1,4 +1,4 @@
-import Swal from 'sweetalert3'
+import Swal from 'sweetalertbee'
 
 Swal.fire()
 

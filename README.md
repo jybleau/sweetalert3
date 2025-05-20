@@ -2,6 +2,8 @@
   <img src="./assets/swal3-logo.png" width="498" alt="SweetAlertBee">
 </a>
 
+<br>
+
 SweetAlert Bee is a direct replacement for SweetAlert2 without security and ethical issues.
 
 A beautiful, responsive, customizable, accessible (WAI-ARIA) replacement <br> for JavaScript's popup boxes. Zero dependencies.
