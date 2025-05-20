@@ -11,20 +11,20 @@ const banner = `/*!
 */`
 
 const footer = `\
-if (typeof this !== 'undefined' && this.Sweetalert2){\
-this.swal = this.sweetAlert = this.Swal = this.SweetAlert = this.Sweetalert2\
+if (typeof this !== 'undefined' && this.Sweetalert3){\
+this.swal = this.sweetAlert = this.Swal = this.SweetAlert = this.Sweetalert3\
 }`
 
 const output = {
   format: 'umd',
-  name: 'Sweetalert2',
-  file: 'dist/sweetalert2.js',
+  name: 'Sweetalert3',
+  file: 'dist/sweetalert3.js',
   banner,
   footer,
 }
 const outputEsm = {
   format: 'es',
-  file: 'dist/sweetalert2.esm.js',
+  file: 'dist/sweetalert3.esm.js',
   banner,
 }
 
@@ -36,18 +36,18 @@ export default {
       targets: 'defaults',
     }),
   ],
-  input: 'src/sweetalert2.js',
+  input: 'src/sweetalert3.js',
   output: [
     output,
     outputEsm,
     {
       ...output,
-      file: 'dist/sweetalert2.min.js',
+      file: 'dist/sweetalert3.min.js',
       plugins: [terser()],
     },
     {
       ...outputEsm,
-      file: 'dist/sweetalert2.esm.min.js',
+      file: 'dist/sweetalert3.esm.min.js',
       plugins: [terser()],
     },
   ],

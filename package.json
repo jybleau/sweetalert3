@@ -1,13 +1,13 @@
 {
-  "name": "sweetalert2",
+  "name": "sweetalert3",
   "version": "11.21.2",
-  "repository": "sweetalert2/sweetalert2",
-  "homepage": "https://sweetalert2.github.io/",
+  "repository": "jybleau/sweetalert3",
+  "homepage": "https://github.com/jybleau",
   "description": "A beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes, supported fork of sweetalert",
-  "main": "dist/sweetalert2.all.js",
-  "browser": "dist/sweetalert2.all.js",
-  "module": "dist/sweetalert2.esm.all.js",
-  "types": "sweetalert2.d.ts",
+  "main": "dist/sweetalert3.all.js",
+  "browser": "dist/sweetalert3.all.js",
+  "module": "dist/sweetalert3.esm.all.js",
+  "types": "sweetalert3.d.ts",
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
@@ -51,6 +51,7 @@
   "keywords": [
     "sweetalert",
     "sweetalert2",
+    "sweetalert3",
     "alert",
     "modal",
     "popup",
@@ -70,7 +71,7 @@
   },
   "funding": {
     "type": "individual",
-    "url": "https://github.com/sponsors/limonte"
+    "url": "https://github.com/sponsors/jybleau"
   },
   "prettier": {
     "printWidth": 120,
@@ -79,6 +80,6 @@
     "quoteProps": "consistent",
     "trailingComma": "es5"
   },
-  "bugs": "https://github.com/sweetalert2/sweetalert2/issues",
+  "bugs": "https://github.com/jybleau/sweetalert3/issues",
   "license": "MIT"
 }

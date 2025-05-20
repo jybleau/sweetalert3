@@ -1,7 +1,7 @@
-import Swal from '../src/sweetalert2'
+import Swal from '../src/sweetalert3'
 import { isVisible } from '../src/utils/dom'
 
-export { default as Swal } from '../src/sweetalert2'
+export { default as Swal } from '../src/sweetalert3'
 
 export const $ = document.querySelector.bind(document)
 

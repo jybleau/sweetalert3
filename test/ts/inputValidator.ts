@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert3'
 
 // https://www.totaltypescript.com/how-to-test-your-types
 type Expect<T extends true> = T

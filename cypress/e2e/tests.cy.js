@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import jQuery from 'jquery'
-import Swal from '../../src/sweetalert2'
+import Swal from '../../src/sweetalert3'
 import { SHOW_CLASS_TIMEOUT } from '../../src/utils/openPopup'
 import {
   $,
@@ -361,7 +361,7 @@ describe('allowOutsideClick', () => {
       backdrop: false,
     })
     expect(
-      spy.calledWith('SweetAlert2: "allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`')
+      spy.calledWith('SweetAlert3: "allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`')
     ).to.be.true
   })
 
@@ -392,7 +392,7 @@ describe('customClass', () => {
     Swal.fire({
       icon: 'question',
       input: 'text',
-      imageUrl: '/assets/swal2-logo.png',
+      imageUrl: '/assets/swal3-logo.png',
       timer: 10000,
       timerProgressBar: true,
       customClass: {
@@ -460,10 +460,10 @@ describe('customClass', () => {
       },
     })
     expect(
-      spy.calledWith('SweetAlert2: Invalid type of customClass.title! Expected string or iterable object, got "object"')
+      spy.calledWith('SweetAlert3: Invalid type of customClass.title! Expected string or iterable object, got "object"')
     ).to.be.true
     expect(
-      spy.calledWith('SweetAlert2: Invalid type of customClass.popup! Expected string or iterable object, got "number"')
+      spy.calledWith('SweetAlert3: Invalid type of customClass.popup! Expected string or iterable object, got "number"')
     ).to.be.true
   })
 })
@@ -606,7 +606,7 @@ describe('icon', () => {
     })
     expect(
       spy.calledWith(
-        'SweetAlert2: Unknown icon! Expected "success", "error", "warning", "info" or "question", got "invalid-icon"'
+        'SweetAlert3: Unknown icon! Expected "success", "error", "warning", "info" or "question", got "invalid-icon"'
       )
     ).to.be.true
 
@@ -668,18 +668,18 @@ describe('icon', () => {
 describe('image', () => {
   it('imageUrl, imageWidth, imageHeight', () => {
     Swal.fire({
-      imageUrl: 'https://sweetalert2.github.io/images/swal2-logo.png',
+      imageUrl: 'https://github.com/jybleau/sweetalert3/tree/main/assets/swal3-logo.png',
       imageWidth: 498,
       imageHeight: 84,
     })
-    expect(Swal.getImage().src).to.equal('https://sweetalert2.github.io/images/swal2-logo.png')
+    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/swal3-logo.png')
     expect(Swal.getImage().style.width).to.equal('498px')
     expect(Swal.getImage().style.height).to.equal('84px')
   })
 
   it('image dimensions in custom CSS units', () => {
     Swal.fire({
-      imageUrl: 'https://sweetalert2.github.io/images/swal2-logo.png',
+      imageUrl: 'https://github.com/jybleau/sweetalert3/tree/main/assets/swal3-logo.png',
       imageWidth: '50%',
       imageHeight: '3em',
     })
@@ -689,7 +689,7 @@ describe('image', () => {
 
   it('image alt text', () => {
     Swal.fire({
-      imageUrl: '/assets/swal2-logo.png',
+      imageUrl: '/assets/swal3-logo.png',
       imageAlt: 'Custom icon',
     })
     expect(Swal.getImage().getAttribute('alt')).to.equal('Custom icon')
@@ -1209,7 +1209,7 @@ describe('template', () => {
       <swal-title>Are you sure?</swal-title>
       <swal-html>You won't be able to revert this!</swal-html>
       <swal-icon type="success"></swal-icon>
-      <swal-image src="https://sweetalert2.github.io/images/SweetAlert2.png" width="300" height="60" alt="safdsafd"></swal-image>
+      <swal-image src="https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png" width="300" height="60" alt="safdsafd"></swal-image>
       <swal-input type="select" placeholder="placeholderrr" value="b" label="input label">
         <swal-input-option value="a">aa</swal-input-option>
         <swal-input-option value="b">bb</swal-input-option>
@@ -1231,7 +1231,7 @@ describe('template', () => {
     })
     expect(Swal.getPopup().classList.contains('my-popup')).to.be.true
     expect(Swal.getTitle().textContent).to.equal('Are you sure?')
-    expect(Swal.getImage().src).to.equal('https://sweetalert2.github.io/images/SweetAlert2.png')
+    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png')
     expect(Swal.getImage().style.width).to.equal('300px')
     expect(Swal.getImage().style.height).to.equal('60px')
     expect(Swal.getInput().classList.contains('swal2-select')).to.be.true
@@ -1303,7 +1303,7 @@ describe('template', () => {
       <swal-html>Check out this <a>link</a>!</swal-html>
       <swal-foo>bar</swal-foo>
       <swal-title value="hey!"></swal-title>
-      <swal-image src="https://sweetalert2.github.io/images/SweetAlert2.png" width="100" height="100" alt="" foo="1">Are you sure?</swal-image>
+      <swal-image src="https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png" width="100" height="100" alt="" foo="1">Are you sure?</swal-image>
       <swal-input bar>Are you sure?</swal-input>
     `
     document.body.appendChild(template)
@@ -1314,32 +1314,32 @@ describe('template', () => {
       imageWidth: 200, // user param should override <swal-image width="100">
       template: '#my-template-with-unexpected-attributes',
     })
-    expect(Swal.getImage().src).to.equal('https://sweetalert2.github.io/images/SweetAlert2.png')
+    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png')
     expect(Swal.getImage().style.width).to.equal('200px')
     expect(Swal.getImage().style.height).to.equal('100px')
     expect(Swal.getImage().getAttribute('alt')).to.equal('')
     expect(Swal.getInput().type).to.equal('text')
     expect(spy.callCount).to.equal(4)
-    expect(spy.getCall(0).calledWith(`SweetAlert2: Unrecognized element <swal-foo>`)).to.be.true
+    expect(spy.getCall(0).calledWith(`SweetAlert3: Unrecognized element <swal-foo>`)).to.be.true
     expect(
       spy
         .getCall(1)
         .calledWith(
-          `SweetAlert2: Unrecognized attribute "foo" on <swal-image>. Allowed attributes are: src, width, height, alt`
+          `SweetAlert3: Unrecognized attribute "foo" on <swal-image>. Allowed attributes are: src, width, height, alt`
         )
     ).to.be.true
     expect(
       spy
         .getCall(2)
         .calledWith(
-          `SweetAlert2: Unrecognized attribute "bar" on <swal-input>. Allowed attributes are: type, label, placeholder, value`
+          `SweetAlert3: Unrecognized attribute "bar" on <swal-input>. Allowed attributes are: type, label, placeholder, value`
         )
     ).to.be.true
     expect(
       spy
         .getCall(3)
         .calledWith(
-          `SweetAlert2: Unrecognized attribute "value" on <swal-title>. To set the value, use HTML within the element.`
+          `SweetAlert3: Unrecognized attribute "value" on <swal-title>. To set the value, use HTML within the element.`
         )
     ).to.be.true
   })
@@ -2089,7 +2089,7 @@ describe('theme', () => {
     })
     expect(
       spy.calledWith(
-        `SweetAlert2: Invalid theme "foo". Expected "light", "dark", "auto", "minimal", "borderless", or "embed-iframe"`
+        `SweetAlert3: Invalid theme "foo". Expected "light", "dark", "auto", "minimal", "borderless", or "embed-iframe"`
       )
     ).to.be.true
   })
@@ -2110,7 +2110,7 @@ describe('update()', () => {
       icon: 'success',
       input: 'text',
       showConfirmButton: false,
-      imageUrl: '/assets/swal2-logo.png',
+      imageUrl: '/assets/swal3-logo.png',
       preConfirm: () => console.log('1'), // eslint-disable-line no-console
     })
 
@@ -2125,7 +2125,7 @@ describe('update()', () => {
       showCancelButton: true,
       denyButtonText: 'New deny button text',
       cancelButtonText: 'New cancel button text',
-      imageUrl: '/assets/swal2-logo.png',
+      imageUrl: '/assets/swal3-logo.png',
       showCloseButton: true,
       preConfirm: () => console.log('2'), // eslint-disable-line no-console
     })
@@ -2141,7 +2141,7 @@ describe('update()', () => {
     expect(Swal.getIcon().style.borderColor).to.equal('blue')
 
     expect(isVisible(Swal.getImage())).to.be.true
-    expect(Swal.getImage().src.indexOf('/assets/swal2-logo.png') > 0).to.be.true
+    expect(Swal.getImage().src.indexOf('/assets/swal3-logo.png') > 0).to.be.true
 
     expect(isVisible(Swal.getConfirmButton())).to.be.true
     expect(isVisible(Swal.getCancelButton())).to.be.true
@@ -2162,7 +2162,7 @@ describe('update()', () => {
   it('update customClass', () => {
     SwalWithoutAnimation.fire({
       icon: 'success',
-      imageUrl: '/assets/swal2-logo.png',
+      imageUrl: '/assets/swal3-logo.png',
       input: 'text',
     })
 
@@ -2330,7 +2330,7 @@ describe('update()', () => {
       Swal.update()
       expect(
         spy.calledWith(
-          `SweetAlert2: You're trying to update the closed or closing popup, that won't work. Use the update() method in preConfirm parameter or show a new popup.`
+          `SweetAlert3: You're trying to update the closed or closing popup, that won't work. Use the update() method in preConfirm parameter or show a new popup.`
         )
       ).to.be.true
       done()
@@ -2344,7 +2344,7 @@ describe('update()', () => {
     Swal.update({ theme: 'foo' })
     expect(
       spy.calledWith(
-        `SweetAlert2: Invalid theme "foo". Expected "light", "dark", "auto", "minimal", "borderless", or "embed-iframe"`
+        `SweetAlert3: Invalid theme "foo". Expected "light", "dark", "auto", "minimal", "borderless", or "embed-iframe"`
       )
     ).to.be.true
   })
@@ -2368,13 +2368,13 @@ describe('Miscellaneous tests', function () {
   it('should throw console warning about invalid params', () => {
     const spy = cy.spy(console, 'warn')
     Swal.fire({ invalidParam: 'oops' })
-    expect(spy.calledWith('SweetAlert2: Unknown parameter "invalidParam"')).to.be.true
+    expect(spy.calledWith('SweetAlert3: Unknown parameter "invalidParam"')).to.be.true
   })
 
   it('should throw console error about unexpected params', () => {
     const spy = cy.spy(console, 'error')
     Swal.fire('Hello world!', { icon: 'success' })
-    expect(spy.calledWith('SweetAlert2: Unexpected type of html! Expected "string" or "Element", got object')).to.be
+    expect(spy.calledWith('SweetAlert3: Unexpected type of html! Expected "string" or "Element", got object')).to.be
       .true
   })
 
@@ -2459,7 +2459,7 @@ describe('Miscellaneous tests', function () {
     Swal.fire({
       showCancelButton: true,
       showDenyButton: true,
-      imageUrl: '/assets/swal2-logo.png',
+      imageUrl: '/assets/swal3-logo.png',
       confirmButtonText: 'Confirm button',
       confirmButtonAriaLabel: 'Confirm button aria-label',
       denyButtonText: 'Deny button',
@@ -2468,7 +2468,7 @@ describe('Miscellaneous tests', function () {
       cancelButtonAriaLabel: 'Cancel button aria-label',
       footer: '<b>Footer</b>',
     })
-    expect(Swal.getImage().src.includes('/assets/swal2-logo.png')).to.be.true
+    expect(Swal.getImage().src.includes('/assets/swal3-logo.png')).to.be.true
     expect(Swal.getActions().textContent).to.equal('Confirm buttonDeny buttonCancel button')
     expect(Swal.getConfirmButton().innerText).to.equal('Confirm button')
     expect(Swal.getDenyButton().innerText).to.equal('Deny button')
@@ -3068,7 +3068,7 @@ describe('Inputs', () => {
     const spy = cy.spy(console, 'error')
     Swal.fire({ input: 'invalid-input-type' })
     expect(spy).to.be.calledWith(
-      'SweetAlert2: Unexpected type of input! Expected month | week | time | datetime-local | date | search | url | tel | number | password | email | text | file | range | select | radio | checkbox | textarea, got "invalid-input-type"'
+      'SweetAlert3: Unexpected type of input! Expected month | week | time | datetime-local | date | search | url | tel | number | password | email | text | file | range | select | radio | checkbox | textarea, got "invalid-input-type"'
     )
   })
 
@@ -3375,7 +3375,7 @@ describe('Inputs', () => {
     inputOptions.set('Frameworks optgroup', frameworkOptGroupOptions)
 
     const libOptGroupOptions = new Map()
-    libOptGroupOptions.set('1000', 'SweetAlert2')
+    libOptGroupOptions.set('1000', 'SweetAlert3')
     libOptGroupOptions.set('2000', 'Bootstrap4')
     inputOptions.set('Library optgroup', libOptGroupOptions)
 
@@ -3392,7 +3392,7 @@ describe('Inputs', () => {
     expect($('.swal2-select optgroup:nth-child(1) option:nth-child(2)').value).to.equal('200')
     expect($('.swal2-select optgroup:nth-child(1) option:nth-child(3)').innerHTML).to.equal('VueJS')
     expect($('.swal2-select optgroup:nth-child(1) option:nth-child(3)').value).to.equal('300')
-    expect($('.swal2-select optgroup:nth-child(2) option:nth-child(1)').innerHTML).to.equal('SweetAlert2')
+    expect($('.swal2-select optgroup:nth-child(2) option:nth-child(1)').innerHTML).to.equal('SweetAlert3')
     expect($('.swal2-select optgroup:nth-child(2) option:nth-child(1)').value).to.equal('1000')
     expect($('.swal2-select optgroup:nth-child(2) option:nth-child(1)').selected).to.equal(true)
     expect($('.swal2-select optgroup:nth-child(2) option:nth-child(2)').innerHTML).to.equal('Bootstrap4')
@@ -3504,7 +3504,7 @@ describe('Inputs', () => {
       returnInputValueOnDeny: true,
     })
     Swal.clickDeny()
-    expect(spy.calledWith('SweetAlert2: The "input" parameter is needed to be set when using returnInputValueOnDeny'))
+    expect(spy.calledWith('SweetAlert3: The "input" parameter is needed to be set when using returnInputValueOnDeny'))
       .to.be.true
   })
 
@@ -3543,7 +3543,7 @@ describe('Inputs', () => {
   it('should throw console error about unexpected type of InputOptions', () => {
     const spy = cy.spy(console, 'error')
     Swal.fire({ input: 'select', inputOptions: 'invalid-input-options' })
-    expect(spy.calledWith('SweetAlert2: Unexpected type of inputOptions! Expected object, Map or Promise, got string'))
+    expect(spy.calledWith('SweetAlert3: Unexpected type of inputOptions! Expected object, Map or Promise, got string'))
       .to.be.true
   })
 
@@ -3788,7 +3788,7 @@ describe('inputValue', () => {
       }),
       didOpen: () => {
         setTimeout(() => {
-          expect(spy.calledWith('SweetAlert2: Error in inputValue promise: Error: input promise rejected')).to.be.true
+          expect(spy.calledWith('SweetAlert3: Error in inputValue promise: Error: input promise rejected')).to.be.true
           done()
         }, TIMEOUT)
       },
@@ -3800,7 +3800,7 @@ describe('inputValue', () => {
     Swal.fire({ input: 'text', inputValue: undefined })
     expect(
       spy.calledWith(
-        'SweetAlert2: Unexpected type of inputValue! Expected "string", "number" or "Promise", got "undefined"'
+        'SweetAlert3: Unexpected type of inputValue! Expected "string", "number" or "Promise", got "undefined"'
       )
     ).to.be.true
   })
@@ -3810,7 +3810,7 @@ describe('inputValue', () => {
     Swal.fire({ input: 'textarea', inputValue: {} })
     expect(
       spy.calledWith(
-        'SweetAlert2: Unexpected type of inputValue! Expected "string", "number" or "Promise", got "object"'
+        'SweetAlert3: Unexpected type of inputValue! Expected "string", "number" or "Promise", got "object"'
       )
     ).to.be.true
   })
@@ -4069,7 +4069,7 @@ describe('Styling', () => {
     Swal.fire({
       title: 'title',
       icon: 'success',
-      imageUrl: '/assets/swal2-logo.png',
+      imageUrl: '/assets/swal3-logo.png',
       input: 'text',
       inputLabel: 'inputLabel',
       showDenyButton: true,
@@ -4133,7 +4133,7 @@ describe('Styling', () => {
     Swal.fire({
       title: 'title',
       icon: 'success',
-      imageUrl: '/assets/swal2-logo.png',
+      imageUrl: '/assets/swal3-logo.png',
       input: 'text',
       inputLabel: 'inputLabel',
       showDenyButton: true,
@@ -4186,7 +4186,7 @@ describe('Toast', () => {
     Toast.fire({
       allowOutsideClick: true,
     })
-    expect(spy.calledWith('SweetAlert2: The parameter "allowOutsideClick" is incompatible with toasts')).to.be.true
+    expect(spy.calledWith('SweetAlert3: The parameter "allowOutsideClick" is incompatible with toasts')).to.be.true
 
     console.warn = _consoleWarn
   })
@@ -4356,7 +4356,7 @@ describe('bindClickHandler', () => {
     const buttonTriggerToast = document.createElement('button')
     buttonTriggerToast.setAttribute('data-swal-toast-template', '#my-template-for-declarative-triggering')
     const imgInsideButtonTriggerToast = document.createElement('img')
-    imgInsideButtonTriggerToast.src = 'https://sweetalert2.github.io/images/SweetAlert2.png'
+    imgInsideButtonTriggerToast.src = 'https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png'
     buttonTriggerToast.appendChild(imgInsideButtonTriggerToast)
     document.body.appendChild(buttonTriggerToast)
 

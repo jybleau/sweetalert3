@@ -7,12 +7,12 @@ const distFiles = fs.readdirSync('dist')
 
 for (const version of ['@11', '@latest']) {
   echo` - ${version}`
-  await $`curl --silent https://purge.jsdelivr.net/npm/sweetalert2${version}`
+  await $`curl --silent https://purge.jsdelivr.net/npm/sweetalert3${version}`
 
   // dist
   for (const distFile of distFiles) {
     echo`   - dist/${distFile}`
-    await $`curl --silent https://purge.jsdelivr.net/npm/sweetalert2${version}/dist/${distFile}`
+    await $`curl --silent https://purge.jsdelivr.net/npm/sweetalert3${version}/dist/${distFile}`
   }
 }
 

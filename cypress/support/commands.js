@@ -37,5 +37,5 @@ const fetchStyles = (target, linkHref) => {
 
 before(async () => {
   await fetchStyles(parent.document.head, '/cypress/styles.css')
-  await fetchStyles(document.head, '/dist/sweetalert2.css')
+  await fetchStyles(document.head, '/dist/sweetalert3.css')
 })

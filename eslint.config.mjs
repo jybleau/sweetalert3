@@ -30,7 +30,7 @@ export default [
     },
   },
   {
-    files: ['sweetalert2.d.ts'],
+    files: ['sweetalert3.d.ts'],
     rules: {
       'jsdoc/require-param': 0,
       'jsdoc/require-returns': 0,
