@@ -1,3 +1,3 @@
-import Swal from 'sweetalert3/dist/sweetalert3.js'
+import Swal from 'sweetalertbee/dist/sweetalertbee.js'
 
 Swal.fire()

@@ -1,4 +1,4 @@
-declare module 'sweetalert3' {
+declare module 'sweetalertbee' {
   /**
    * A namespace inside the default function, containing utility function for controlling the currently-displayed popup.
    *
@@ -1275,16 +1275,16 @@ declare module 'sweetalert3' {
   export default Swal
 }
 
-declare module 'sweetalert3/*/sweetalert3.js' {
-  export * from 'sweetalert3'
+declare module 'sweetalertbee/*/sweetalertbee.js' {
+  export * from 'sweetalertbee'
   // "export *" does not matches the default export, so do it explicitly.
-  export { default } from 'sweetalert3'
+  export { default } from 'sweetalertbee'
 }
 
-declare module 'sweetalert3/*/sweetalert3.all.js' {
-  export * from 'sweetalert3'
+declare module 'sweetalertbee/*/sweetalertbee.all.js' {
+  export * from 'sweetalertbee'
   // "export *" does not matches the default export, so do it explicitly.
-  export { default } from 'sweetalert3'
+  export { default } from 'sweetalertbee'
 }
 
 /**

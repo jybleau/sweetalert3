@@ -1,4 +1,4 @@
-import Swal from '../sweetalert3.js'
+import Swal from '../sweetalertbee.js'
 import { swalClasses } from '../utils/classes.js'
 import * as dom from '../utils/dom/index.js'
 

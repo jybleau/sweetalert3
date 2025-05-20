@@ -1,4 +1,4 @@
-/// <reference path="../../../../sweetalert3.d.ts"/>
+/// <reference path="../../../../sweetalertbee.d.ts"/>
 
 /**
  * @typedef { HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement } Input

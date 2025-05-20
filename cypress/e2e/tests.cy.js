@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import jQuery from 'jquery'
-import Swal from '../../src/sweetalert3'
+import Swal from '../../src/sweetalertbee'
 import { SHOW_CLASS_TIMEOUT } from '../../src/utils/openPopup'
 import {
   $,
@@ -1209,7 +1209,7 @@ describe('template', () => {
       <swal-title>Are you sure?</swal-title>
       <swal-html>You won't be able to revert this!</swal-html>
       <swal-icon type="success"></swal-icon>
-      <swal-image src="https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png" width="300" height="60" alt="safdsafd"></swal-image>
+      <swal-image src="https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png" width="300" height="60" alt="safdsafd"></swal-image>
       <swal-input type="select" placeholder="placeholderrr" value="b" label="input label">
         <swal-input-option value="a">aa</swal-input-option>
         <swal-input-option value="b">bb</swal-input-option>
@@ -1231,7 +1231,7 @@ describe('template', () => {
     })
     expect(Swal.getPopup().classList.contains('my-popup')).to.be.true
     expect(Swal.getTitle().textContent).to.equal('Are you sure?')
-    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png')
+    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png')
     expect(Swal.getImage().style.width).to.equal('300px')
     expect(Swal.getImage().style.height).to.equal('60px')
     expect(Swal.getInput().classList.contains('swal2-select')).to.be.true
@@ -1303,7 +1303,7 @@ describe('template', () => {
       <swal-html>Check out this <a>link</a>!</swal-html>
       <swal-foo>bar</swal-foo>
       <swal-title value="hey!"></swal-title>
-      <swal-image src="https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png" width="100" height="100" alt="" foo="1">Are you sure?</swal-image>
+      <swal-image src="https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png" width="100" height="100" alt="" foo="1">Are you sure?</swal-image>
       <swal-input bar>Are you sure?</swal-input>
     `
     document.body.appendChild(template)
@@ -1314,7 +1314,7 @@ describe('template', () => {
       imageWidth: 200, // user param should override <swal-image width="100">
       template: '#my-template-with-unexpected-attributes',
     })
-    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png')
+    expect(Swal.getImage().src).to.equal('https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png')
     expect(Swal.getImage().style.width).to.equal('200px')
     expect(Swal.getImage().style.height).to.equal('100px')
     expect(Swal.getImage().getAttribute('alt')).to.equal('')
@@ -3375,7 +3375,7 @@ describe('Inputs', () => {
     inputOptions.set('Frameworks optgroup', frameworkOptGroupOptions)
 
     const libOptGroupOptions = new Map()
-    libOptGroupOptions.set('1000', 'SweetAlert3')
+    libOptGroupOptions.set('1000', 'SweetAlertBee')
     libOptGroupOptions.set('2000', 'Bootstrap4')
     inputOptions.set('Library optgroup', libOptGroupOptions)
 
@@ -3392,7 +3392,7 @@ describe('Inputs', () => {
     expect($('.swal2-select optgroup:nth-child(1) option:nth-child(2)').value).to.equal('200')
     expect($('.swal2-select optgroup:nth-child(1) option:nth-child(3)').innerHTML).to.equal('VueJS')
     expect($('.swal2-select optgroup:nth-child(1) option:nth-child(3)').value).to.equal('300')
-    expect($('.swal2-select optgroup:nth-child(2) option:nth-child(1)').innerHTML).to.equal('SweetAlert3')
+    expect($('.swal2-select optgroup:nth-child(2) option:nth-child(1)').innerHTML).to.equal('SweetAlertBee')
     expect($('.swal2-select optgroup:nth-child(2) option:nth-child(1)').value).to.equal('1000')
     expect($('.swal2-select optgroup:nth-child(2) option:nth-child(1)').selected).to.equal(true)
     expect($('.swal2-select optgroup:nth-child(2) option:nth-child(2)').innerHTML).to.equal('Bootstrap4')
@@ -4356,7 +4356,7 @@ describe('bindClickHandler', () => {
     const buttonTriggerToast = document.createElement('button')
     buttonTriggerToast.setAttribute('data-swal-toast-template', '#my-template-for-declarative-triggering')
     const imgInsideButtonTriggerToast = document.createElement('img')
-    imgInsideButtonTriggerToast.src = 'https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlert3.png'
+    imgInsideButtonTriggerToast.src = 'https://github.com/jybleau/sweetalert3/tree/main/assets/SweetAlertBee.png'
     buttonTriggerToast.appendChild(imgInsideButtonTriggerToast)
     document.body.appendChild(buttonTriggerToast)
 

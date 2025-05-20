@@ -1,16 +1,16 @@
 {
-  "name": "@panache/sweetalert3",
+  "name": "sweetalertbee",
   "version": "11.22.1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jybleau/sweetalert3.git"
+    "url": "git+https://github.com/jybleau/sweetalertbee.git"
   },
-  "homepage": "https://github.com/jybleau/sweetalert3",
+  "homepage": "https://github.com/jybleau/sweetalertbee",
   "description": "A beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes, supported fork of sweetalert",
-  "main": "dist/sweetalert3.all.js",
-  "browser": "dist/sweetalert3.all.js",
-  "module": "dist/sweetalert3.esm.all.js",
-  "types": "sweetalert3.d.ts",
+  "main": "dist/sweetalertbee.all.js",
+  "browser": "dist/sweetalertbee.all.js",
+  "module": "dist/sweetalertbee.esm.all.js",
+  "types": "sweetalertbee.d.ts",
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
@@ -40,9 +40,9 @@
     "dist",
     "src",
     "themes",
-    "sweetalert3.d.ts"
+    "sweetalertbee.d.ts"
   ],
-  "author": "",
+  "author": "Jacques-Yves Bleau (https://github.com/jybleau)",
   "contributors": [
     "Limon Monte (https://limonte.github.io)",
     "Matthew Francis Brunetti <zenflow87@gmail.com> (https://github.com/zenflow)",
@@ -56,6 +56,7 @@
     "sweetalert",
     "sweetalert2",
     "sweetalert3",
+    "sweetalertbee",
     "alert",
     "modal",
     "popup",
@@ -84,7 +85,7 @@
     "quoteProps": "consistent",
     "trailingComma": "es5"
   },
-  "bugs": "https://github.com/jybleau/sweetalert3/issues",
+  "bugs": "https://github.com/jybleau/sweetalertbee/issues",
   "license": "MIT",
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

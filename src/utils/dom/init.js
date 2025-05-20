@@ -131,7 +131,7 @@ export const init = (params) => {
   const oldContainerExisted = resetOldContainer()
 
   if (isNodeEnv()) {
-    error('SweetAlert3 requires document to initialize')
+    error('SweetAlertBee requires document to initialize')
     return
   }
 
