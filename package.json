@@ -1,6 +1,6 @@
 {
   "name": "@panache/sweetalert3",
-  "version": "11.22.0",
+  "version": "11.22.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jybleau/sweetalert3.git"
