@@ -3172,8 +3172,8 @@ describe('Inputs', () => {
   })
 
   it('input url + built-in url validation', (done) => {
-    const invalidUrl = 'sweetalert2.github.io'
-    const validUrl = 'https://sweetalert2.github.io/'
+    const invalidUrl = 'github.com/jybleau/sweetalertbee'
+    const validUrl = 'https://github.com/jybleau/sweetalertbee'
     SwalWithoutAnimation.fire({ input: 'url' }).then((result) => {
       expect(result.value).to.equal(validUrl)
       done()
