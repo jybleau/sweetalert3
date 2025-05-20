@@ -12,9 +12,9 @@ This reposotory is maintained in sync with SweetAlert2.
 
 ## Installation
 
-`npm install sweetalert3`
+`npm install @panache/sweetalert3`
 
-`yarn add sweetalert3`
+`yarn add @panache/sweetalert3`
 
 ---
 
