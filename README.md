@@ -1,4 +1,4 @@
-<a href="https://sweetalert2.github.io/">
+<a href="https://github.com/jybleau/sweetalert3">
   <img src="./assets/swal3-logo.png" width="498" alt="SweetAlert3">
 </a>
 
@@ -18,4 +18,10 @@ This reposotory is maintained in sync with SweetAlert2.
 
 ---
 
-### [Usage](https://sweetalert2.github.io/#usage) | [Examples](https://sweetalert2.github.io/#examples) | [Recipe gallery](https://sweetalert2.github.io/recipe-gallery/) | [React](https://github.com/sweetalert2/sweetalert2-react-content) | [Angular](https://github.com/sweetalert2/ngx-sweetalert2) | [Laravel](https://github.com/sweetalert2/sweetalert2-laravel)
+## Documentation
+
+The SweetAlert2 documentation applies to SweetAlert3
+
+* [Usage](https://sweetalert2.github.io/#usage)
+* [Examples](https://sweetalert2.github.io/#examples)
+* [Recipe gallery](https://sweetalert2.github.io/recipe-gallery/)
