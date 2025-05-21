@@ -23,6 +23,7 @@
 
   // ANIMATIONS
   --swal2-show-animation: swal2-show 0.3s;
+  --swal2-show-fancy-animation: swal2-show-fancy 0.3s;
   --swal2-hide-animation: swal2-hide 0.15s forwards;
 
   // ICONS
@@ -143,6 +144,7 @@ $swal2-color: var(--swal2-color) !default;
 
 // ANIMATIONS
 $swal2-show-animation: var(--swal2-show-animation) !default;
+$swal2-show-fancy-animation: var(--swal2-show-fancy-animation) !default;
 $swal2-hide-animation: var(--swal2-hide-animation) !default;
 
 // TYPOGRAPHY
@@ -1246,6 +1248,10 @@ div:where(.swal2-icon) {
   animation: $swal2-show-animation;
 }
 
+.swal2-show-fancy {
+  animation: $swal2-show-fancy-animation;
+}
+
 .swal2-hide {
   animation: $swal2-hide-animation;
 }
@@ -1482,8 +1488,20 @@ div:where(.swal2-icon) {
 
 //////////////////////////////
 // ANIMATIONS
-// Appearance animation
+// Appearance animations
 @keyframes swal2-show {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes swal2-show-fancy {
   0% {
     transform: scale(0.7);
   }
