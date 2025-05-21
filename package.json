@@ -71,7 +71,8 @@
     "test": "cypress run --headless",
     "check-types": "npx -p typescript@latest tsc --noEmit --lib dom,es2018 -p jsconfig.json",
     "cypress:open": "cypress open",
-    "webpack-build": "webpack --config=test/webpack/webpack.config.js"
+    "webpack-build": "webpack --config=test/webpack/webpack.config.js",
+    "purge-jsdelivr": "zx tools/purge-jsdelivr.mjs"
   },
   "funding": {
     "type": "individual",

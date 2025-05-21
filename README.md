@@ -14,9 +14,19 @@ NB: This repository is maintained in sync with SweetAlert2.
 
 ## Installation
 
+### NPM Registry
+
 `npm install sweetalertbee`
 
 `yarn add sweetalertbee`
+
+### JsDelivr
+
+```html
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalertbee/dist/sweetalertbee.all.min.js
+"></script>
+```
 
 ## Basic examples
 
